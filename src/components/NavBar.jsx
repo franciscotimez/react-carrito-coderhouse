@@ -1,12 +1,15 @@
 import React from 'react'
+import './NavBar.css'
 
 export const NavBar = () => {
   return (
-    <ul>
-        <li><a>Cosas</a></li>
-        <li><a>Cosas</a></li>
-        <li><a>Cosas</a></li>
-        <li><a>Cosas</a></li>
-    </ul>
+    <div className="container">
+      <ul>
+          <li><a>Home</a></li>
+          <li><a>Noticias</a></li>
+          <li><a>Contacto</a></li>
+          <li><a>Nosotros</a></li>
+      </ul>
+    </div>
   )
 }
