@@ -1,7 +1,9 @@
 import React from 'react'
-import './NavBar.css'
+import CartWidget from '../CartWidget';
+import './style.css'
 
-export const NavBar = () => {
+
+const NavBar = () => {
   return (
     <div className="container">
       <ul>
@@ -9,7 +11,10 @@ export const NavBar = () => {
           <li><a>Noticias</a></li>
           <li><a>Contacto</a></li>
           <li><a>Nosotros</a></li>
+          <li><CartWidget /></li>
       </ul>
     </div>
   )
 }
+
+export default NavBar
