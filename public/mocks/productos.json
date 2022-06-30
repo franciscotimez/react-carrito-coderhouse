@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Producto 1",
+        "price": 25.32,
+        "pictureUrl": "Url Producto 1"
+    },
+    {
+        "id": 2,
+        "title": "Producto 2",
+        "price": 25.32,
+        "pictureUrl": "Url Producto 2"
+    },
+    {
+        "id": 3,
+        "title": "Producto 3",
+        "price": 25.32,
+        "pictureUrl": "Url Producto 3"
+    },
+    {
+        "id": 4,
+        "title": "Producto 4",
+        "price": 25.32,
+        "pictureUrl": "Url Producto 4"
+    },
+    {
+        "id": 5,
+        "title": "Producto 5",
+        "price": 25.32,
+        "pictureUrl": "Url Producto 5"
+    },
+    {
+        "id": 6,
+        "title": "Producto 6",
+        "price": 25.32,
+        "pictureUrl": "Url Producto 6"
+    }
+]
