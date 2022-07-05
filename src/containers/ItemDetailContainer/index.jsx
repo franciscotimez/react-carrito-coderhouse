@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
             try {
                 const response = await fetch("https://fakestoreapi.com/products/4");
                 const data = await response.json();
-                setProductDetail(data, productDetail);
+                setProductDetail(data);
             } catch (error) {
                 console.error(error)
                 // setError(error.message);
@@ -17,9 +17,14 @@ const ItemDetailContainer = () => {
         }
         getProducts()
     }, []);
+
   return (
     <div>
-        <ItemDetail product={productDetail}/>
+        {
+        productDetail ?
+        <ItemDetail product={productDetail}/> :
+        <p>Cargando...</p>
+    }
     </div>
   )
 }
