@@ -7,9 +7,11 @@ const NavBar = () => {
   return (
     <div className="container">
       <ul>
-          <li><Link to='/' >Home</Link></li>
+          <li><Link to='/' >Home</Link></li>electronics
+          <li><Link to="/category/electronics" >electronics</Link></li>
           <li><Link to="/category/jewelery" >jewelery</Link></li>
           <li><Link to="/category/men's clothing" >men's clothing</Link></li>
+          <li><Link to="/category/women's clothing" >women's clothing</Link></li>women's clothing
           <li><CartWidget /></li>
       </ul>
     </div>

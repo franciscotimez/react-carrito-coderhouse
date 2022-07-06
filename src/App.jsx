@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './containers/ItemListContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import NotFound from './components/NotFound/idex';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
