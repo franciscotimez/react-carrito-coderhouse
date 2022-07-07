@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import './style.css'
+import './styles.css'
 
 export const Item = ({data}) => {
     let { id, title, description, category, price, rating, image } = data
@@ -11,11 +11,15 @@ export const Item = ({data}) => {
     }
   return (
     <div className="itemCard" onClick={handleDetail}>
-        <h2>{title}</h2>
-        <h3>Precio: {price}</h3>
-        <h4>{category}</h4>
+        <div>
+          <h4>{category}</h4>
+          <h3>Price: {price}$</h3>
+        </div>
         {/* <p>{description}</p> */}
-        <img src={image} alt={description} />
+        <div>
+          <img src={image} alt={description} />
+        </div>
+        <h2>{title}</h2>
     </div>
   )
 }
