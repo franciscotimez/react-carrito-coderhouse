@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
-import ItemCount from '../../components/ItemCount';
 import { ItemList } from '../../components/ItemList';
 import './styles.css';
 
@@ -36,10 +35,6 @@ const ItemListContainer = () => {
     }
   }, [params, productos]);
 
-  const handleAdd = (count) => {
-    console.log(`Se agregaron ${count} items al carrito`)
-  }
-
   return (
     <div className="listContainer">
           {
@@ -47,7 +42,6 @@ const ItemListContainer = () => {
             <ItemList items={productosFiltered} /> :
             <p>Cargado...</p>
           }
-        <ItemCount stock={5} initial={0} onAddCart={handleAdd}/>
     </div>
   )
 }
