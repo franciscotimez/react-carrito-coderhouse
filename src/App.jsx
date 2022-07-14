@@ -6,19 +6,22 @@ import ItemDetailContainer from './containers/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './components/NotFound';
 import CartContainer from './containers/CartContainer';
+import CartContext from './context/CartContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer />}></Route>
-        <Route path="/category/:categoryId" element={<ItemListContainer />}></Route>
-        <Route path="/detail/:productId" element={<ItemDetailContainer />}></Route>
-        <Route path="/cart" element={<CartContainer />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <CartContext>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />}></Route>
+          <Route path="/category/:categoryId" element={<ItemListContainer />}></Route>
+          <Route path="/detail/:productId" element={<ItemDetailContainer />}></Route>
+          <Route path="/cart" element={<CartContainer />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </CartContext>
   );
 }
 
