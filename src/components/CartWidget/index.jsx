@@ -1,11 +1,19 @@
-import React from 'react'
-import { IoCartOutline } from "react-icons/io5";
+import React, { useContext } from 'react'
+import { HiShoppingCart } from "react-icons/hi";
+import { Shop } from '../../context/CartContext';
 
 const CartWidget = () => {
+  const {cartResume} = useContext(Shop);
+
   return (
-    <div>
-    <IoCartOutline size={"3rem"} style={{padding: "10px"}}/>
-    </div>
+    <>
+    { cartResume.itemsTotal > 0 && 
+      <div>
+        <HiShoppingCart size={"3rem"} style={{padding: "10px"}}/>
+        <span style={{color: "white"}}>({cartResume.itemsTotal})</span>
+      </div>
+    }
+    </>
   )
 }
 

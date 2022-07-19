@@ -1,0 +1,28 @@
+.itemCart {
+    width: 80%;
+    height: 10rem;
+    padding: 2px 15px;
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid #666;
+    border-radius: 15px;
+}
+
+.itemCartImg {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 9rem;
+}
+
+.itemCartImg img {
+    align-self: center;
+    width: 70%;
+    object-fit: contain;
+}
+
+.itemCartDescription {
+    width: 50%
+}
