@@ -7,8 +7,7 @@ import './main.css'
 const ItemDetail = ({product}) => {
   
   const {addToCart} = useContext(Shop);
-    const {title, description, price, image} = product
-    const stock = 10
+    const {title, description, price, image, stock} = product
     const [quantity, setQuantity] = useState(null);
 
     const navigate = useNavigate()

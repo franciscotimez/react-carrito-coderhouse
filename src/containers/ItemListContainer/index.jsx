@@ -1,6 +1,8 @@
+import { collection, getDocs, query } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import { ItemList } from '../../components/ItemList';
+import { db } from '../../firebase/config';
 import './styles.css';
 
 const ItemListContainer = () => {
@@ -14,9 +16,15 @@ const ItemListContainer = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(`https://fakestoreapi.com/products`)
-        const data = await response.json();
-        console.log(data)
+        const q = query(collection(db, 'products'))
+        const querySnap = await getDocs(q)
+        const data = []
+        querySnap.forEach((doc) => {
+          data.push({id: doc.id, ...doc.data()})
+        })
+
+        // const response = await fetch(`https://fakestoreapi.com/products`)
+        // const data = await response.json();
         setProductos(data)
         setProductosFiltered(data)
       } catch (error) {
