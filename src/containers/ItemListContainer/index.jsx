@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import { ItemList } from '../../components/ItemList';
 import { db } from '../../firebase/config';
+// import loadCollections from '../../firebase/loadCollections';
 import './styles.css';
 
 const ItemListContainer = () => {
@@ -16,6 +17,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     (async () => {
       try {
+        // loadCollections() // EJECUTAR UNA SOLA VEZ!!!!!!
         const q = query(collection(db, 'products'))
         const querySnap = await getDocs(q)
         const data = []
