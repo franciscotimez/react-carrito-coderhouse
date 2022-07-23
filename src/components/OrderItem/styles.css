@@ -1,0 +1,43 @@
+.itemOrder {
+    width: 80%;
+    padding: 2px 15px;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 2px solid #666;
+    border-radius: 15px;
+}
+
+.itemOrder h3{
+    margin: 0;
+}
+
+.itemOrder h4{
+    margin: 0;
+}
+
+.itemOrder h5{
+    margin: 0;
+}
+
+.itemOrder p{
+    margin: 0;
+}
+
+.itemCartImg {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 9rem;
+}
+
+.itemCartImg img {
+    align-self: center;
+    width: 70%;
+    object-fit: contain;
+}
+
+.itemCartDescription {
+    width: 50%
+}

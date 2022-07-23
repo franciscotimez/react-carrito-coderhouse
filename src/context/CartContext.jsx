@@ -37,12 +37,17 @@ const CartContext = ({ children }) => {
     return 
   };
 
+  const clearCart = () => {
+    setCart([]);
+    return 
+  };
+
   const isInCart = (productId) => {
     return cart.find(element => element.id === productId)
   };
 
   return (
-    <Shop.Provider value={{ addToCart, removeToCart, cart, cartResume}}>
+    <Shop.Provider value={{ addToCart, removeToCart, cart, cartResume, clearCart}}>
       {children}
     </Shop.Provider>
   );
