@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import './styles.css'
 
 export const Item = ({data}) => {
-    let { id, title, description, category, price, rating, image } = data
+    let { id, title, description, category, price, image } = data
 
     const navidateTo = useNavigate();
     const handleDetail = () => {
-      navidateTo(`/detail/${id}`)
+      navidateTo(`/item/${id}`)
     }
   return (
     <div className="itemCard" onClick={handleDetail}>

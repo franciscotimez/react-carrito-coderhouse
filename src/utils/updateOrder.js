@@ -1,6 +1,9 @@
 import { addDoc, collection, doc, getDoc, writeBatch } from "firebase/firestore";
 import { db } from "../firebase/config";
 
+import Swal from 'sweetalert2'
+import 'sweetalert2/dist/sweetalert2.min.css'
+
 const updateOrder = async ( cart, order, clearCart) => {
     console.log("Carrito a actualizar: ", cart);
     console.log("Orden a actualizar: ", order);
@@ -37,7 +40,7 @@ const updateOrder = async ( cart, order, clearCart) => {
             const docRef = await addDoc(collection(db, "orders"), order)
             await batch.commit()
             clearCart()
-            alert(`Orden creada con ID: ${docRef.id}`)
+            Swal.fire('Orden creada', `ID: ${docRef.id}`, 'success')
         } catch (error) {
             console.log(error)
         }

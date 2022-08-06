@@ -1,0 +1,14 @@
+.widgetItemCount {
+    color: #333;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    width: 2.5rem;
+    border-radius: 10px;
+    margin: 3px;
+    padding: 2px 3px 3px 3px;
+}
+
+a{
+    padding: 0;
+}

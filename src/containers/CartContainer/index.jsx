@@ -1,27 +1,19 @@
-import { addDoc, collection } from 'firebase/firestore';
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import CartItem from '../../components/CartItem';
+import { CheckoutModal } from '../../components/CheckoutModal';
 import { Shop } from '../../context/CartContext';
-import { db } from '../../firebase/config';
-import generateOrder from '../../utils/generateOrder';
-import updateOrder from '../../utils/updateOrder';
+
 import './styles.css';
 
 const CartContainer = () => {
 
   const {cart, clearCart, cartResume, removeToCart} = useContext(Shop)
 
-  const confirmarOrden = async () => {
-    const order = generateOrder("Francisco", "Timez","Calle falsa 123", "3764121212","franciscotimez@gmail.com", cart, cartResume)
-    console.log(order)
+  const [openModal, setOpenModal] = useState(false);
 
-    // Update Stock order
-    updateOrder(cart , order, clearCart)
-
-    // // Create Order in firebase
-    // const docRef = await addDoc(collection(db, "orders"), order)
-    // console.log("Orden creada con ID: ", docRef.id)
+  const confirmarOrden = () => {
+    setOpenModal(true);
   }
   console.log(cart)
   return (
@@ -43,9 +35,7 @@ const CartContainer = () => {
             <Link to='/' >Go to Home!!!</Link>
           </div>
           }
-        <div>
-          <Link to='/orders' >Ordenes</Link>
-        </div>
+        <CheckoutModal isOpen={ openModal } setOpen={ setOpenModal }/>
     </div>
   )
 }

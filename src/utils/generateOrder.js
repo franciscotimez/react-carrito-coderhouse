@@ -1,14 +1,8 @@
 
 // Generador de orden
-const generateOrder = (name, lastname, address, phone, email, cart, cartResume) => {
+const generateOrder = (buyer, cart, cartResume) => {
     return {
-        buyer: {
-            name: name,
-            lastname: lastname,
-            address: address,
-            phone: phone,
-            email: email
-        },
+        buyer,
         items: cart.map(item => ({
             id: item.id,
             title: item.title,
