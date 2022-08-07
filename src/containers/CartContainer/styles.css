@@ -1,3 +1,20 @@
 .cartContainer {
     margin-left: 10%;
 }
+
+.buttonConfirm {
+    width: 180px;
+    height: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: #555;
+    border: 0;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+.btn:disabled {
+    background-color: #999;
+}

@@ -13,7 +13,7 @@ export const Item = ({data}) => {
     <div className="itemCard" onClick={handleDetail}>
         <div>
           <h4>{category}</h4>
-          <h3>Price: {price}$</h3>
+          <h3>Precio: {price}$</h3>
         </div>
         {/* <p>{description}</p> */}
         <div>

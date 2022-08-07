@@ -6,3 +6,30 @@
 .ItemDetail img {
     width: 30%;
 }
+
+.priceBox {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.priceBox h2 {
+    margin: 13px 0;
+}
+
+.btnTerminate {
+    width: 180px;
+    height: 60px;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: #555;
+    border: 0;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+.btn:disabled {
+    background-color: #999;
+}

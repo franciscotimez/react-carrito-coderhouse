@@ -9,13 +9,6 @@ const OrderItem = ({ item }) => {
     <div className="itemOrder">
       <h3>Orden ID: {item.id}</h3>
       <p>Fecha de compra: {item.createdAt}</p>
-      <div className="itemCartDescription">
-        <h4>Comprador</h4>
-        <p>Nombre: {item.buyer.name}</p>
-        <p>Apellido: {item.buyer.lastname}</p>
-        <p>Direccion: {item.buyer.address}</p>
-        <p>e-mail: {item.buyer.email}</p>
-      </div>
       <div>
         <h5>Items</h5>
         {
@@ -27,7 +20,7 @@ const OrderItem = ({ item }) => {
       </div>
       <div>
         <h5>Total</h5>
-        <p>{item.total}</p>
+        <p>{item.total.toFixed(2)}$</p>
       </div>
     </div>
   );

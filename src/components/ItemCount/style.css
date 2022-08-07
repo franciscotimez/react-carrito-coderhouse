@@ -1,0 +1,37 @@
+.itemCountContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 181px;
+    height: 60px;
+}
+.itemCountContainer span {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+}
+.buttonAddSub {
+    width: 60px;
+    height: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: #555;
+    border: 0;
+}
+
+.buttonAddToCart {
+    width: 180px;
+    height: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: #555;
+    border: 0;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+.btn:disabled {
+    background-color: #999;
+}

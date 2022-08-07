@@ -3,10 +3,10 @@ import './styles.css'
 
 export const ItemOrder = ({item}) => {
   return (
-    <div>
+    <div className="itemOrderBuyed">
       <p>{item.title}</p>
       <p>{item.quantity}</p>
-      <p>{item.price}</p>
+      <p>{item.price.toFixed(2)}$</p>
     </div>
   )
 }

@@ -1,6 +1,20 @@
-.itemContainer {
-    width: 95vw;
+.itemOrderBuyed{
+    width: 500px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemOrderBuyed p:first-child {
+    width: 400px;
+}
+
+.itemOrderBuyed p:nth-child(2) {
+    width: 30px;
+    text-align: center;
+}
+
+.itemOrderBuyed p:nth-child(3) {
+    width: 60px;
+    text-align: right;
 }

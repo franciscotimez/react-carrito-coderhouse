@@ -8,10 +8,10 @@ const NavBar = () => {
     <div className="container">
       <ul>
           <li><Link to='/' >Home</Link></li>
-          <li><Link to="/category/electronics" >electronics</Link></li>
-          <li><Link to="/category/jewelery" >jewelery</Link></li>
-          <li><Link to="/category/men's clothing" >men's clothing</Link></li>
-          <li><Link to="/category/women's clothing" >women's clothing</Link></li>
+          <li><Link to="/category/electronics" >Electronicos</Link></li>
+          <li><Link to="/category/jewelery" >Joyeria</Link></li>
+          <li><Link to="/category/men's clothing" >Ropa de Hombre</Link></li>
+          <li><Link to="/category/women's clothing" >Ropa de Mujer</Link></li>
           <li><Link to='/orders' >Ordenes</Link></li>
           <li><Link to='/cart' className='cartWidget' ><CartWidget /></Link></li>
       </ul>

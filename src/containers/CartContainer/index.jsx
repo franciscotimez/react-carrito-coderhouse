@@ -28,7 +28,7 @@ const CartContainer = () => {
           <div>
             <h3>Precio Total: {cartResume.precioTotal}</h3>
             <h3>Cantidad Items: {cartResume.itemsTotal}</h3>
-            <button onClick={confirmarOrden}>Confirmar Compra</button>
+            <button className="btn buttonConfirm" onClick={confirmarOrden}>Confirmar Compra</button>
           </div> :
           <div>
             <h3>El carrito esta vacio!!</h3>

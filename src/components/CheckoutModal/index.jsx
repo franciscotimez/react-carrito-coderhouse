@@ -154,6 +154,7 @@ export const CheckoutModal = ({ isOpen, setOpen }) => {
                 <button
                     type="submit"
                     disabled={ submitDisable }
+                    className="btn buttonComprar"
                 >
                     Comprar
                 </button>
