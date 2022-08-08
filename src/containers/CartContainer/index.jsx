@@ -8,7 +8,7 @@ import './styles.css';
 
 const CartContainer = () => {
 
-  const {cart, clearCart, cartResume, removeToCart} = useContext(Shop)
+  const {cart, cartResume, removeToCart} = useContext(Shop)
 
   const [openModal, setOpenModal] = useState(false);
 
