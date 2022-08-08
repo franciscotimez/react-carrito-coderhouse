@@ -1,12 +1,7 @@
 import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import CartItem from '../../components/CartItem';
 import OrderItem from '../../components/OrderItem';
-import { Shop } from '../../context/CartContext';
 import { db } from '../../firebase/config';
-import generateOrder from '../../utils/generateOrder';
-import updateOrder from '../../utils/updateOrder';
 import './styles.css';
 
 const OrdersContainer = () => {
