@@ -41,3 +41,9 @@
 .itemCartDescription {
     width: 50%
 }
+
+.itemOrderPrice {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}

@@ -15,11 +15,11 @@ export const Item = ({data}) => {
           <h4>{category}</h4>
           <h3>Precio: {price}$</h3>
         </div>
-        {/* <p>{description}</p> */}
         <div>
-          <img src={image} alt={description} />
+          <img src={image} alt={title} />
         </div>
         <h2>{title}</h2>
+        <p>{description.substring(0, 200)}</p>
     </div>
   )
 }

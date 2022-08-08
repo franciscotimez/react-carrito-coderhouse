@@ -37,10 +37,12 @@ const OrdersContainer = () => {
   return (
     <div className="orderContainer">
       {
-        orders.length > 0 &&
+        orders.length > 0 ?
         orders.map(item => {
           return <OrderItem key={item.id} item={item} />;
         })
+        :
+        <h1>No Hay Ordenes Generadas.</h1>
       }
     </div>
   );

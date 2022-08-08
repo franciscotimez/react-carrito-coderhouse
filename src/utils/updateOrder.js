@@ -61,7 +61,7 @@ const updateOrder = async (cart, order, clearCart) => {
         }
     }
     else {
-        console.log(outOfStock);
+        Swal.fire('Fuera de Stock', `Productos Fuera de Stock: ${outOfStock.length}`, 'error')
     }
 };
 
